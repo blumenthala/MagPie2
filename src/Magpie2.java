@@ -22,7 +22,7 @@ public class Magpie2
 	}
 	
 	/**
-	 * Gives a response to a user statement
+	 * Gives a response to a user statement llll
 	 * 
 	 * @param statement
 	 *            the user statement
