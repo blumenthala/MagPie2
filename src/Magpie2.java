@@ -29,30 +29,51 @@ public class Magpie2
 	 * @return a response based on the rules given
 	 */
 	public String getResponse(String statement)
-	{
-		String response = "";
-		if (statement.indexOf("no") >= 0)
-		{
-			response = "Why so negative?";
-		}
-		else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
-				|| statement.indexOf("sister") >= 0
-				|| statement.indexOf("brother") >= 0)
-		{
-			response = "Tell me more about your family.";
-            response = "";
-		}
-        else if (statement.indexOf("dog") >= 0
-                || statement.indexOf("cat") >= 0)
+    {
+        String response = "";
+        if (statement.indexOf("no") >= 0)
         {
+            response = "Why so negative?";
+        }
+        else if (statement.indexOf("mother") >= 0
+                || statement.indexOf("father") >= 0
+                || statement.indexOf("sister") >= 0
+                || statement.indexOf("brother") >= 0)
+        {
+            response = "Tell me more about your family.";
+
+        }
+        else if (statement.indexOf("dog") >= 0
+                || statement.indexOf("cat") >= 0) {
             response = "Tell me more about your pets.";
         }
-		else
-		{
+        if (statement.indexOf("Mr. Tanczos") >= 0)
+        {
+            response = "Mr. Tanczos is epic!";
+        }
+        else if (statement.length() < 1)
+        {
+            response = "Say something, please.";
+        }
+        else if (statement.indexOf("computer science") >= 0)
+        {
+            response = "Computer Science is awesome!";
+        }
+        else if (statement.indexOf("dinosaurs") >= 0)
+        {
+            response = "They are dead, very very dead.";
+        }
+        else if (statement.indexOf("yolo") >= 0)
+        {
+            response = "I do not talk to stupid people";
+        }
+
+        else
+        {
 			response = getRandomResponse();
 		}
 		return response;
+
 	}
 
 	/**
@@ -61,7 +82,7 @@ public class Magpie2
 	 */
 	private String getRandomResponse()
 	{
-		final int NUMBER_OF_RESPONSES = 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+		final int NUMBER_OF_RESPONSES = 6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
 		double r = Math.random();
 		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
 		String response = "";
@@ -82,6 +103,14 @@ public class Magpie2
 		{
 			response = "You don't say.";
 		}
+        else if (whichResponse == 4)
+        {
+            response = "No way man";
+        }
+        else if (whichResponse == 5)
+        {
+            response = "No you are very incorrect";
+        }
 
 		return response;
 	}
