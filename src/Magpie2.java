@@ -35,20 +35,19 @@ public class Magpie2
         {
             response = "Why so negative?";
         }
-        else if (statement.indexOf("mother") >= 0
+        if (statement.indexOf("mother") >=0
                 || statement.indexOf("father") >= 0
                 || statement.indexOf("sister") >= 0
                 || statement.indexOf("brother") >= 0)
         {
             response = "Tell me more about your family.";
-
         }
-        else if (statement.indexOf("dog") >= 0
+        if (statement.indexOf("dog") >= 0
                 || statement.indexOf("cat") >= 0) {
             response = "Tell me more about your pets.";
         }
         if (statement.indexOf("Mr. Tanczos") >= 0)
-        {
+            {
             response = "Mr. Tanczos is epic!";
         }
         else if (statement.length() < 1)
@@ -82,7 +81,7 @@ public class Magpie2
 	 */
 	private String getRandomResponse()
 	{
-		final int NUMBER_OF_RESPONSES = 6                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
+		final int NUMBER_OF_RESPONSES = 8                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
 		double r = Math.random();
 		int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
 		String response = "";
